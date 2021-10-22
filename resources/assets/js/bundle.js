@@ -1,0 +1,20 @@
+window.EditorJS = require('@editorjs/editorjs');
+window.ArcanelyEditor = { 
+    DragDrop : require('editorjs-drag-drop'),
+    Header : require('editorjs-header-with-anchor'),
+    NestedList : require('@editorjs/nested-list'),
+    Checklist : require('@editorjs/checklist'),
+    RawTool : require('@editorjs/raw'),
+    Underline : require('@editorjs/underline'),
+    InlineCode : require('@editorjs/inline-code'),
+    Marker : require('@editorjs/marker'),
+    Quote : require('@editorjs/quote'),
+    SimpleImage : require('@editorjs/simple-image'),
+    Delimiter : require('@editorjs/delimiter'),
+    Table : require('@editorjs/table'),
+    CodeTool : require('@editorjs/code'),
+    Alert : require('editorjs-alert'),
+    InlineImage : require('editorjs-inline-image'),
+    AnyButton : require('editorjs-button'),
+    LinkAutocomplete : require('@editorjs/link-autocomplete')
+};

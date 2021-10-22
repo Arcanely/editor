@@ -1,0 +1,56 @@
+{
+    "name": "arcanely/editor",
+    "description": "Laravel Blade Component Library for Editor.js",
+    "keywords": [
+        "arcanely",
+        "editor"
+    ],
+    "homepage": "https://github.com/arcanely/editor",
+    "license": "MIT",
+    "type": "library",
+    "authors": [
+        {
+            "name": "Nick Adams",
+            "email": "nickolas.j.adams@gmail.com",
+            "role": "Developer"
+        }
+    ],
+    "minimum-stability": "dev",
+    "require": {
+        "php": "^7.4|^8.0",
+        "codex-team/editor.js": "dev-master",
+        "illuminate/support": "^8.0"
+    },
+    "require-dev": {
+        "orchestra/testbench": "^6.0",
+        "phpunit/phpunit": "^9.0"
+    },
+    "autoload": {
+        "psr-4": {
+            "Arcanely\\Editor\\": "src"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "Arcanely\\Editor\\Tests\\": "tests"
+        }
+    },
+    "scripts": {
+        "test": "vendor/bin/phpunit",
+        "test-coverage": "vendor/bin/phpunit --coverage-html coverage"
+
+    },
+    "config": {
+        "sort-packages": true
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "Arcanely\\Editor\\EditorServiceProvider"
+            ],
+            "aliases": {
+                "Editor": "Arcanely\\Editor\\EditorFacade"
+            }
+        }
+    }
+}
