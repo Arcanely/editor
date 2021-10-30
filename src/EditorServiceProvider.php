@@ -29,7 +29,7 @@ class EditorServiceProvider extends ServiceProvider
         }
 
         $this->publishes([
-            __DIR__.'/../public' => public_path('arcanely/editor'),
+            __DIR__.'/../public' => public_path('/'),
         ], 'public');
 
         $this->publishes([
