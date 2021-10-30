@@ -33,12 +33,8 @@ class EditorServiceProvider extends ServiceProvider
         ], 'public');
 
         $this->publishes([
-            __DIR__.'/../resources/views' => resource_path('arcanely/editor'),
-        ], 'views');
-
-        $this->publishes([
-            __DIR__.'/../resources/assets' => public_path('arcanely/editor'),
-        ], 'assets');
+            __DIR__.'/../resources' => resource_path('arcanely/editor'),
+        ], 'resources');
 
         // Load the components
         $this->loadViewsFrom(self::PATH_VIEWS, 'arcanely');
@@ -61,5 +57,5 @@ class EditorServiceProvider extends ServiceProvider
             return new Editor;
         });
     }
-    
+
 }
