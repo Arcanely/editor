@@ -1,0 +1,17 @@
+@use 'sass:color';
+
+/* Any Button */
+.block {
+    .btn {
+        font-size: inherit;
+        background: $primary;
+        color: $white;
+        border: $primary 2px solid;
+
+        &:hover, &:focus, &:active {
+            background: $white;
+            color: $primary;
+            border-color: $primary;
+        }
+    }
+}

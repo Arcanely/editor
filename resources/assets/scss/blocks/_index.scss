@@ -1,9 +1,5 @@
-@use 'sass:color';
 
-/**
- * Copyright Nick Adams
- */
-
+@import '../foundation/index';
 @import 'common';
 @import 'alert';
 @import 'any-button';
@@ -16,6 +12,3 @@
 @import 'quote';
 @import 'raw';
 @import 'table';
-
-
-// background: color.scale($dark-bg, $lightness: -10%);

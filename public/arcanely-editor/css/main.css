@@ -1,0 +1,213 @@
+@import url(https://use.fontawesome.com/releases/v5.15.4/css/all.css);
+@charset "UTF-8";
+/**
+ * Copyright Nick Adams
+ * All rights reserved
+ */
+/**
+ * Copyright Nick Adams
+ * All rights reserved
+ */
+/* Paragraphs, blocks, and inline tags. */
+.block {
+  font-size: 1.15rem;
+  line-height: 1.75rem;
+}
+.block .inline-code {
+  background: rgba(0, 0, 0, 0.78);
+  color: #00f7ff;
+}
+
+/* Alert */
+.block .alert {
+  border-width: 1px;
+  border-style: solid;
+  border-radius: 0.25rem;
+  padding: 0.75rem 0.75rem;
+  margin-bottom: 0.75rem;
+}
+.block .alert i {
+  margin-right: 5px;
+}
+.block .alert.alert-primary {
+  border-color: #9ec5fe;
+  background: #c3dbff;
+  color: #01419e;
+}
+.block .alert.alert-secondary {
+  border-color: #c4c8cc;
+  background: #dadddf;
+  color: #26292c;
+}
+.block .alert.alert-info {
+  border-color: #9deafa;
+  background: #c2f2fc;
+  color: #054754;
+}
+.block .alert.alert-success {
+  border-color: #7ae6b4;
+  background: #a6efcd;
+  color: #092f1d;
+}
+.block .alert.alert-warning {
+  border-color: #ffe38f;
+  background: #ffecb5;
+  color: #4f3b00;
+}
+.block .alert.alert-danger {
+  border-color: #efa4ab;
+  background: #f5c2c7;
+  color: #460c12;
+}
+.block .alert.alert-light {
+  background: #f8f9fa;
+  color: #222;
+  border-color: #c3c9ce;
+}
+.block .alert.alert-dark {
+  background: #212529;
+  color: #f5f5f5;
+  border-color: #687d91;
+}
+
+/* Any Button */
+.block .btn {
+  font-size: inherit;
+  background: #0d6efd;
+  color: #f5f5f5;
+  border: #0d6efd 2px solid;
+}
+.block .btn:hover, .block .btn:focus, .block .btn:active {
+  background: #f5f5f5;
+  color: #0d6efd;
+  border-color: #0d6efd;
+}
+
+.block.code pre {
+  background: #212529;
+  overflow-x: scroll;
+  padding: 0.75rem 1rem;
+}
+
+/* Delimiter */
+.block.delimiter {
+  margin: 5rem 0;
+  text-align: center;
+}
+
+/* Headings */
+.block h1 {
+  font-size: 2em;
+}
+.block h2 {
+  font-size: 1.5em;
+}
+.block h3 {
+  font-size: 1.4em;
+}
+.block h4 {
+  font-size: 1.3em;
+}
+.block h5 {
+  font-size: 1.2em;
+}
+.block h6 {
+  font-size: 1.1em;
+}
+
+/* Images */
+.block.image {
+  margin: 20px 0;
+  line-height: 0;
+  text-align: center;
+}
+.block.image .border {
+  border: 2px solid #ddd;
+}
+.block.image .background {
+  background: #eee;
+}
+.block.image .stretched img {
+  width: 100%;
+}
+
+/* Nested Lists */
+.block ol {
+  list-style-type: none;
+  counter-reset: item;
+  margin: 0;
+  padding: 0;
+}
+.block ol > li {
+  display: table;
+  counter-increment: item;
+  margin-bottom: 0.6em;
+}
+.block ol > li:before {
+  content: counters(item, ".");
+  display: table-cell;
+  padding-right: 0.6em;
+}
+.block li ol > li {
+  margin: 0;
+}
+.block li ol > li:before {
+  content: counters(item, ".");
+}
+
+/* Quotes */
+.block figure.quote {
+  background: #f8f9fa;
+  border-left: 10px solid #ccc;
+  margin: 1.5em 0;
+  padding: 1.5em 15px;
+  quotes: "“" "”" "‘" "’";
+}
+.block figure.quote:before {
+  color: #ccc;
+  content: open-quote;
+  font-size: 4em;
+  line-height: 0.1em;
+  margin-right: 0.1em;
+  vertical-align: -0.4em;
+}
+.block figure.quote blockquote {
+  display: inline;
+  margin: 0;
+}
+.block figure.quote figcaption {
+  text-align: right;
+  margin-right: 5px;
+}
+
+/* Tables */
+.block table {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 25px 0;
+  font-size: 0.9em;
+  font-family: sans-serif;
+  min-width: 400px;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.15);
+}
+.block table thead tr {
+  background-color: #0d6efd;
+  color: #ffffff;
+  text-align: left;
+}
+.block table th, .block table td {
+  padding: 0.75rem 1rem;
+}
+.block table tbody tr {
+  border-bottom: 1px solid #dddddd;
+}
+.block table tbody tr.active-row {
+  font-weight: bold;
+  color: #0d6efd;
+}
+.block table tbody tr:nth-of-type(even) {
+  background-color: #f3f3f3;
+}
+.block table tbody tr:last-of-type {
+  border-bottom: 2px solid #0d6efd;
+}

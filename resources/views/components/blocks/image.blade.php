@@ -1,4 +1,4 @@
-<div class="block">
+<div class="block image">
     @php
         $classes = [];
         if ($block->data->withBorder) {

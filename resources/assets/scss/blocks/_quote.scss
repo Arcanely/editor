@@ -1,0 +1,28 @@
+
+/* Quotes */
+.block {
+    figure.quote {
+        background: $light;
+        border-left: 10px solid #ccc;
+        margin: 1.5em 0;
+        padding: 1.5em 15px;
+        quotes: "\201C""\201D""\2018""\2019";
+    }
+    figure.quote:before {
+        color: #ccc;
+        content: open-quote;
+        font-size: 4em;
+        line-height: 0.1em;
+        margin-right: 0.1em;
+        vertical-align: -0.4em;
+    }
+    figure.quote blockquote {
+        display: inline;
+        margin: 0;
+    }
+
+    figure.quote figcaption {
+        text-align: right;
+        margin-right: 5px;
+    }
+}

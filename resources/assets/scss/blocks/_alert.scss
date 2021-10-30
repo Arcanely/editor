@@ -1,0 +1,63 @@
+@use 'sass:color';
+
+/* Alert */
+.block .alert {
+    border-width: 1px;
+    border-style: solid;
+    border-radius: .25rem;
+    padding: $padding-y $padding-y;
+    margin-bottom: $padding-y;
+
+    i {
+        margin-right: 5px;
+    }
+
+    &.alert-primary {
+        border-color: color.scale($primary, $lightness: 60%);
+        background: color.scale($primary, $lightness: 75%);
+        color: color.scale($primary, $lightness: -40%);
+    }
+
+    &.alert-secondary {
+        border-color: color.scale($secondary, $lightness: 60%);
+        background: color.scale($secondary, $lightness: 75%);
+        color: color.scale($secondary, $lightness: -65%);
+    }
+    
+    &.alert-info {
+        border-color: color.scale($info, $lightness: 60%);
+        background: color.scale($info, $lightness: 75%);
+        color: color.scale($info, $lightness: -65%);
+    }
+
+    &.alert-success {
+        border-color: color.scale($success, $lightness: 55%);
+        background: color.scale($success, $lightness: 70%);
+        color: color.scale($success, $lightness: -65%);
+    }
+
+    &.alert-warning {
+        border-color: color.scale($warning, $lightness: 55%);
+        background: color.scale($warning, $lightness: 70%);
+        color: color.scale($warning, $lightness: -70%);
+    }
+
+    &.alert-danger {
+        border-color: color.scale($danger, $lightness: 55%);
+        background: color.scale($danger, $lightness: 70%);
+        color: color.scale($danger, $lightness: -70%);
+    }
+
+    &.alert-light {
+        background: $light;
+        color: $black;
+        border-color: color.scale($dark, $lightness: 75%);
+    }
+
+    &.alert-dark {
+        background: $dark;
+        color: $white;
+        border-color: color.scale($light, $lightness: -50%);
+    }
+
+}

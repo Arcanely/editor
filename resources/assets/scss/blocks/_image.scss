@@ -1,0 +1,20 @@
+
+/* Images */
+.block.image {
+
+    margin: 20px 0;
+    line-height: 0;
+    text-align: center;
+
+    .border {
+        border: 2px solid #ddd;
+    }
+    .background {
+        background: #eee;
+    }
+    .stretched {
+        img {
+            width: 100%;
+        }
+    }
+}

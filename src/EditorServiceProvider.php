@@ -32,6 +32,14 @@ class EditorServiceProvider extends ServiceProvider
             __DIR__.'/../public' => public_path('arcanely/editor'),
         ], 'public');
 
+        $this->publishes([
+            __DIR__.'/../resources/views' => resource_path('arcanely/editor'),
+        ], 'views');
+
+        $this->publishes([
+            __DIR__.'/../resources/assets' => public_path('arcanely/editor'),
+        ], 'assets');
+
         // Load the components
         $this->loadViewsFrom(self::PATH_VIEWS, 'arcanely');
         // $this->loadViewsFrom(self::PATH_BLOCK_VIEWS, 'arcanely-editor-blocks');
@@ -53,59 +61,5 @@ class EditorServiceProvider extends ServiceProvider
             return new Editor;
         });
     }
-
-
-
-
-    /**
-     * Bootstrap the application services.
-     */
-    // public function boot()
-    // {
-        /*
-         * Optional methods to load your package assets
-         */
-        // $this->loadTranslationsFrom(__DIR__.'/../resources/lang', 'editor');
-        // $this->loadViewsFrom(__DIR__.'/../resources/views', 'editor');
-        // $this->loadMigrationsFrom(__DIR__.'/../database/migrations');
-        // $this->loadRoutesFrom(__DIR__.'/routes.php');
-
-        // if ($this->app->runningInConsole()) {
-            // $this->publishes([
-                // __DIR__.'/../config/config.php' => config_path('editor.php'),
-            // ], 'config');
-
-            // Publishing the views.
-            /*$this->publishes([
-                __DIR__.'/../resources/views' => resource_path('views/vendor/editor'),
-            ], 'views');*/
-
-            // Publishing assets.
-            /*$this->publishes([
-                __DIR__.'/../resources/assets' => public_path('vendor/editor'),
-            ], 'assets');*/
-
-            // Publishing the translation files.
-            /*$this->publishes([
-                __DIR__.'/../resources/lang' => resource_path('lang/vendor/editor'),
-            ], 'lang');*/
-
-            // Registering package commands.
-            // $this->commands([]);
-        // }
-    // }
-
-    /**
-     * Register the application services.
-     */
-    // public function register()
-    // {
-        // Automatically apply the package configuration
-        // $this->mergeConfigFrom(__DIR__.'/../config/config.php', 'editor');
-
-        // Register the main class to use with the facade
-        // $this->app->singleton('editor', function () {
-            // return new Editor;
-        // });
-    // }
+    
 }
