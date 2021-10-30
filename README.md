@@ -4,7 +4,9 @@
 [![Total Downloads](https://img.shields.io/packagist/dt/arcanely/editor.svg?style=flat-square)](https://packagist.org/packages/arcanely/editor)
 ![GitHub Actions](https://github.com/arcanely/editor/actions/workflows/main.yml/badge.svg)
 
-A Laravel Blade Component Library for the <a href="https://editorjs.io/" target="_blank">Editor.js</a> Block Editor 
+A Laravel Blade Component Library for the <a href="https://editorjs.io/" target="_blank">Editor.js</a> Block Editor
+
+Note: This library does nothing to validate or purify user input. This must be done in your application.
 
 ## Installation
 
