@@ -37,8 +37,13 @@
     },
     "scripts": {
         "test": "vendor/bin/phpunit",
-        "test-coverage": "vendor/bin/phpunit --coverage-html coverage"
-
+        "test-coverage": "vendor/bin/phpunit --coverage-html coverage",
+        "post-update-cmd": [
+            "@php artisan vendor:publish --tag=editor-all --ansi"
+        ],
+        "post-root-package-install": [
+            "@php artisan vendor:publish --tag=editor-all --ansi"
+        ]
     },
     "config": {
         "sort-packages": true
