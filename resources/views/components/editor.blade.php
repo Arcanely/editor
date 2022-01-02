@@ -9,7 +9,7 @@
     <div id="editorjs"></div>
     <input type="hidden" id="content_blocks" name="content_blocks" />
     @push('scripts')
-        <script src="arcanely-editor/js/bundle.js"></script>
+        <script src="/arcanely-editor/js/bundle.js"></script>
         <script type="text/javascript">
 
             /**

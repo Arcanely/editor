@@ -18,12 +18,22 @@ composer require arcanely/editor
 
 You may need to publish like this to get the assets.
 ```bash
-php artisan vendor:publish --provider='Arcanely\\Editor\\EditorServiceProvider' --tag=public
+php artisan vendor:publish --provider='Arcanely\\Editor\\EditorServiceProvider' --tag=editor-public
 ```
 
 You may override the default configuration like this
 ```bash
 php artisan vendor:publish --provider='Arcanely\\Editor\\EditorServiceProvider' --tag=config
+```
+
+You may override the default resources like this
+```bash
+php artisan vendor:publish --provider='Arcanely\\Editor\\EditorServiceProvider' --tag=editor-resources
+```
+
+You may override all default files like this
+```bash
+php artisan vendor:publish --provider='Arcanely\\Editor\\EditorServiceProvider' --tag=editor-all
 ```
 
 You can automate the asset publishing on updates by adding this to the composer.json scripts section.
