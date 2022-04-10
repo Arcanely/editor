@@ -30,10 +30,12 @@ class EditorServiceProvider extends ServiceProvider
 
         $this->publishes([
             __DIR__.'/../public' => public_path('/'),
-        ], 'editor-public');
+            // __DIR__.'/../resources/assets' => resource_path('arcanely/editor/assets'),
+        ], 'editor-assets');
 
         $this->publishes([
-            __DIR__.'/../resources' => resource_path('arcanely/editor'),
+            // __DIR__.'/../resources' => resource_path('arcanely/editor'),
+            __DIR__.'/../resources/views' => resource_path('views/vendor/arcanely/editor'),
         ], 'editor-resources');
 
         if (function_exists('config_path')) { // function not available and 'publish' not relevant in Lumen
