@@ -13,7 +13,6 @@ class EditorServiceProvider extends ServiceProvider
 
     /** @var string */
     private const PATH_VIEWS = __DIR__.'/../resources/views/components';
-    private const PATH_BLOCK_VIEWS = __DIR__.'/../resources/views/components/blocks';
 
     /**
      * Bootstrap the application services.
@@ -22,35 +21,36 @@ class EditorServiceProvider extends ServiceProvider
      */
     public function boot(): void
     {
-        if (function_exists('config_path')) { // function not available and 'publish' not relevant in Lumen
-            $this->publishes([
-                self::CONFIG_FILE => config_path('editor.php'),
-            ], 'editor-config');
-        }
+        /**
+         * TESTING: PASS OR FAIL
+         */
+        $this->publishes([
+            self::CONFIG_FILE => config_path('editor.php'),
+        ], 'config');
 
         $this->publishes([
             __DIR__.'/../public' => public_path('/'),
-            // __DIR__.'/../resources/assets' => resource_path('arcanely/editor/assets'),
-        ], 'editor-assets');
+        ], 'public');
 
         $this->publishes([
-            // __DIR__.'/../resources' => resource_path('arcanely/editor'),
-            __DIR__.'/../resources/views' => base_path('resources/views/vendor/arcanely'),
-        ], 'editor-resources');
+            __DIR__.'/../resources/assets' => resource_path('/assets/arcanely/editor'),
+        ], 'src-assets');
 
-        if (function_exists('config_path')) { // function not available and 'publish' not relevant in Lumen
-            $this->publishes([
-                self::CONFIG_FILE => config_path('editor.php'),
-                __DIR__.'/../public' => public_path('/'),
-                __DIR__.'/../resources' => resource_path('arcanely/editor'),
-            ], 'editor-all');
-        }
+        $this->publishes([
+            __DIR__.'/../resources' => resource_path('views/vendor/arcanely'),
+        ], 'resources');
+
+        // if (function_exists('config_path')) { // function not available and 'publish' not relevant in Lumen
+        //     $this->publishes([
+        //         self::CONFIG_FILE => config_path('editor.php'),
+        //         __DIR__.'/../public' => public_path('/'),
+        //         __DIR__.'/../resources' => resource_path('arcanely/editor'),
+        //     ], 'all');
+        // }
 
         // Load the components
         $this->loadViewsFrom(self::PATH_VIEWS, 'arcanely');
-        // $this->loadViewsFrom(self::PATH_BLOCK_VIEWS, 'arcanely-editor-blocks');
         Blade::componentNamespace('Arcanely\\Editor\\View\\Components', 'arcanely');
-        // Blade::componentNamespace('Arcanely\\Editor\\View\\Components\\Blocks', 'arcanely-editor-blocks');
 
     }
 
