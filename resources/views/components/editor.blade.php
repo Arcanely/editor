@@ -4,8 +4,8 @@
             .codex-editor .ce-block__content, .codex-editor .ce-toolbar__content {
                 max-width: 95%;
             }
-            <link href="/arcanely-editor/css/main.css" rel="stylesheet" />
         </style>
+        <link href="/arcanely-editor/css/main.css" rel="stylesheet" />
     @endpush
     <div id="editorjs"></div>
     <input type="hidden" id="content_blocks" name="content_blocks" />
