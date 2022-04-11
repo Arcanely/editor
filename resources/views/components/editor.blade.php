@@ -4,6 +4,7 @@
             .codex-editor .ce-block__content, .codex-editor .ce-toolbar__content {
                 max-width: 95%;
             }
+            <link href="/arcanely-editor/css/main.css" rel="stylesheet" />
         </style>
     @endpush
     <div id="editorjs"></div>

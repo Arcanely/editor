@@ -22,20 +22,29 @@ class EditorServiceProvider extends ServiceProvider
     public function boot(): void
     {
         /**
-         * TESTING: PASS OR FAIL
+         * TESTING: PASS
          */
         $this->publishes([
             self::CONFIG_FILE => config_path('editor.php'),
         ], 'config');
 
+        /**
+         * TESTING: PASS
+         */
         $this->publishes([
             __DIR__.'/../public' => public_path('/'),
         ], 'public');
 
+        /**
+         * TESTING: PASS
+         */
         $this->publishes([
             __DIR__.'/../resources/assets' => resource_path('/assets/arcanely/editor'),
         ], 'src-assets');
 
+        /**
+         * TESTING: PASS OR FAIL
+         */
         $this->publishes([
             __DIR__.'/../resources/views' => resource_path('views/vendor/arcanely'),
         ], 'views');
