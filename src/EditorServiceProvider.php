@@ -21,41 +21,22 @@ class EditorServiceProvider extends ServiceProvider
      */
     public function boot(): void
     {
-        /**
-         * TESTING: PASS
-         */
+
         $this->publishes([
             self::CONFIG_FILE => config_path('editor.php'),
         ], 'config');
 
-        /**
-         * TESTING: PASS
-         */
         $this->publishes([
             __DIR__.'/../public' => public_path('/'),
         ], 'public');
 
-        /**
-         * TESTING: PASS
-         */
         $this->publishes([
             __DIR__.'/../resources/assets' => resource_path('/assets/arcanely/editor'),
         ], 'src-assets');
 
-        /**
-         * TESTING: PASS OR FAIL
-         */
         $this->publishes([
             __DIR__.'/../resources/views' => resource_path('views/vendor/editor'),
         ], 'views');
-
-        // if (function_exists('config_path')) { // function not available and 'publish' not relevant in Lumen
-        //     $this->publishes([
-        //         self::CONFIG_FILE => config_path('editor.php'),
-        //         __DIR__.'/../public' => public_path('/'),
-        //         __DIR__.'/../resources' => resource_path('arcanely/editor'),
-        //     ], 'all');
-        // }
 
         // Load the components
         $this->loadViewsFrom(self::PATH_VIEWS, 'arcanely');
