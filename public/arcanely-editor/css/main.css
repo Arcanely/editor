@@ -96,22 +96,22 @@
 }
 
 /* Headings */
-.block h1 {
+.block h1, .ce-block h1 {
   font-size: 2em;
 }
-.block h2 {
+.block h2, .ce-block h2 {
   font-size: 1.5em;
 }
-.block h3 {
+.block h3, .ce-block h3 {
   font-size: 1.4em;
 }
-.block h4 {
+.block h4, .ce-block h4 {
   font-size: 1.3em;
 }
-.block h5 {
+.block h5, .ce-block h5 {
   font-size: 1.2em;
 }
-.block h6 {
+.block h6, .ce-block h6 {
   font-size: 1.1em;
 }
 
