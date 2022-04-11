@@ -46,7 +46,7 @@ class EditorServiceProvider extends ServiceProvider
          * TESTING: PASS OR FAIL
          */
         $this->publishes([
-            __DIR__.'/../resources/views' => resource_path('views/vendor/arcanely'),
+            __DIR__.'/../resources/views' => resource_path('views/vendor/editor'),
         ], 'views');
 
         // if (function_exists('config_path')) { // function not available and 'publish' not relevant in Lumen
