@@ -2,12 +2,12 @@
     @push('head')
         <style>
             .codex-editor .ce-block__content, .codex-editor .ce-toolbar__content {
-                max-width: 95%;
+                max-width: 75%;
             }
         </style>
         <link href="/arcanely-editor/css/main.css" rel="stylesheet" />
     @endpush
-    <div id="editorjs"></div>
+    <div id="{{ config('editor.holder') }}"></div>
     <input type="hidden" id="content_blocks" name="content_blocks" />
     @push('scripts')
         <script src="/arcanely-editor/js/bundle.js"></script>

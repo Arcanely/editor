@@ -7,7 +7,7 @@ use Illuminate\View\Component as BaseComponent;
 
 abstract class Component extends BaseComponent
 {
-	protected string $namespace;
+	protected $namespace;
 
 	public function __construct(string $namespace)
 	{
