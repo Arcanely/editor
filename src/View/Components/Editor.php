@@ -7,14 +7,16 @@ use Arcanely\Editor\View\Components\Component;
 class Editor extends Component
 {
     public $saveBtnId;
+    public $content;
     /**
      * Create a new component instance.
      *
      * @return void
      */
-    public function __construct($saveBtnId)
+    public function __construct($saveBtnId, $content = null)
     {
         $this->saveBtnId = $saveBtnId;
+        $this->content = $content;
     }
 
     public function recurseToolOptions($options) {

@@ -64,7 +64,7 @@ $editorConfig = [
                 'endpoint' => 'http://localhost:3000/',
                 'queryParam' => 'search'
             ]
-        ],
+        ]
     ]
 ];
 
@@ -76,9 +76,9 @@ if ($unsplash_enabled_in_editor) {
         'inlineToolbar' => true,
         'config' => [
             'embed' => [
-                'display' => true,
+                'display' => "true", // bug. only the string displays the embed panel
             ],
-            'unsplash' => [
+            'unsplash' => [ // TODO: PR: make a display option here too.
                 'appName' => env('UNSPLASH_APP_NAME') ?: '',
                 'clientId' => env('UNSPLASH_CLIENT_ID') ?: ''
             ]

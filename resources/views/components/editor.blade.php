@@ -55,6 +55,8 @@
             tools: {!! $toolsToJsObject() !!},
             @if (old('content_blocks'))
                 data: {!! old('content_blocks') !!}
+            @elseif ($content != null)
+                data: {!! $content !!}
             @endif
             };
 
