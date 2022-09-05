@@ -22,6 +22,7 @@
     "@editorjs/simple-image": "^1.4.1",
     "@editorjs/table": "^2.0.1",
     "@editorjs/underline": "^1.0.0",
+    "@stegopop/link-autocomplete": "^0.0.1",
     "editorjs-alert": "^1.0.3",
     "editorjs-button": "^1.0.3",
     "editorjs-drag-drop": "^0.2.2",

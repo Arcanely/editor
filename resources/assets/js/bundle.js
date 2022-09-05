@@ -16,5 +16,5 @@ window.ArcanelyEditor = {
     Alert : require('editorjs-alert'),
     InlineImage : require('editorjs-inline-image'),
     AnyButton : require('editorjs-button'),
-    LinkAutocomplete : require('@editorjs/link-autocomplete')
+    LinkAutocomplete : require('@stegopop/link-autocomplete')
 };
